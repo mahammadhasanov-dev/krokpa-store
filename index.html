@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KROKPA — T-Shirts for the Unbothered</title>
+<meta name="description" content="KROKPA Supply Co. — heavyweight oversized T-shirts, made to order in small batches." />
+<link rel="icon" type="image/svg+xml" href="assets/mark.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=2" />
+</head>
+<body>
+
+<div class="ticker"><div class="ticker__track">
+  <span data-i18n="ticker.free_shipping">FREE SHIPPING OVER 150 ₼</span><span>&#9670;</span>
+  <span data-i18n="ticker.new_drop">NEW: T-SHIRT DROP IS LIVE</span><span>&#9670;</span>
+  <span data-i18n="ticker.chrome_limited">CHROME TEE — LIMITED RUN, NO RESTOCK</span><span>&#9670;</span>
+  <span data-i18n="ticker.made_to_order">MADE TO ORDER — SHIPS IN 2&ndash;3 DAYS</span><span>&#9670;</span>
+  <span data-i18n="ticker.free_shipping">FREE SHIPPING OVER 150 ₼</span><span>&#9670;</span>
+  <span data-i18n="ticker.new_drop">NEW: T-SHIRT DROP IS LIVE</span><span>&#9670;</span>
+  <span data-i18n="ticker.chrome_limited">CHROME TEE — LIMITED RUN, NO RESTOCK</span><span>&#9670;</span>
+  <span data-i18n="ticker.made_to_order">MADE TO ORDER — SHIPS IN 2&ndash;3 DAYS</span><span>&#9670;</span>
+</div></div>
+
+<header class="site">
+  <div class="nav">
+    <a href="index.html" class="brand-lockup">
+      <svg viewBox="0 0 64 64"><rect width="64" height="64" rx="10" fill="#0b0b0c"/><g transform="translate(32,32) rotate(-34)" stroke="#d7ff3a" stroke-linecap="round"><line x1="-9" y1="-21" x2="-9" y2="21" stroke-width="5.5"/><line x1="0" y1="-25" x2="0" y2="25" stroke-width="7"/><line x1="9" y1="-21" x2="9" y2="21" stroke-width="5.5"/></g></svg>
+      <span class="word">KROKPA</span>
+    </a>
+    <nav class="nav__links">
+      <a href="index.html#shop" data-i18n="nav.shop">Shop</a>
+      <a href="index.html#about" data-i18n="nav.about">About</a>
+      <a href="policies/shipping.html" data-i18n="nav.shipping">Shipping</a>
+      <a href="policies/returns.html" data-i18n="nav.returns">Returns</a>
+    </nav>
+    <div class="nav__right">
+      <div data-lang-switch-slot></div>
+      <button class="cart-btn" id="cartBtn"><span data-i18n="nav.bag">Bag</span> <span class="cart-count" data-cart-count>0</span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div>
+      <span class="hero__tag" data-i18n="hero.tag">SS26 — SEVEN-WAY DROP</span>
+      <h1 data-i18n="hero.h1">T-SHIRTS FOR THE <em>UNBOTHERED</em></h1>
+      <p class="lead" data-i18n="hero.lead">Heavyweight oversized T-shirts, made to order in small batches. Twelve colorways. No seasons, no filler — just pieces built for whatever you're getting into.</p>
+      <div class="hero__actions">
+        <a href="#shop" class="btn btn-primary" data-i18n="hero.shop_drop">Shop the drop</a>
+        <a href="about.html" class="btn btn-outline" data-i18n="hero.our_story">Our story</a>
+      </div>
+    </div>
+    <div class="hero__art" id="heroArt"></div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="strip__inner">
+    <div class="strip__item" data-i18n="strip.shipping">&#9889; <b>Free shipping</b>&nbsp;over 150 ₼</div>
+    <div class="strip__item" data-i18n="strip.returns">&#8635; <b>30-day</b>&nbsp;returns</div>
+    <div class="strip__item" data-i18n="strip.cotton">&#9878; <b>Heavyweight</b>&nbsp;cotton</div>
+    <div class="strip__item" data-i18n="strip.secure">&#128274; <b>Secure</b>&nbsp;checkout</div>
+  </div>
+</div>
+
+<section class="section" id="shop">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow" data-i18n="shop.eyebrow">The Drop</span>
+        <h2 data-i18n="shop.h2">Twelve Tees.<br>Zero Filler.</h2>
+      </div>
+      <p data-i18n="shop.lead">Every tee is produced in small batches. Limited pieces are clearly marked, while core pieces stay easy to wear and easy to rotate.</p>
+    </div>
+    <div class="grid" id="productGrid"></div>
+  </div>
+</section>
+
+<section class="section about-hero" id="about" style="border-top:1px solid var(--line);border-bottom:none;padding-top:90px;">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow" data-i18n="about.eyebrow">Who We Are</span>
+      <h2 style="font-size:clamp(28px,4vw,42px);margin-bottom:18px;" data-i18n="about.headline">STARTED WITH ONE HAT AND A BAD ATTITUDE.</h2>
+      <p style="color:var(--off-dim);font-size:15px;line-height:1.75;margin-bottom:24px;" data-i18n="about.teaser">KROKPA isn't trying to fit in. We cut small runs, we don't chase seasons, and when a colorway sells out, it doesn't come back. If that means you have to move fast — good. That's the point.</p>
+      <a href="about.html" class="btn btn-outline" data-i18n="about.read_full">Read the full story</a>
+    </div>
+    <div style="display:flex;justify-content:center;">
+      <svg viewBox="0 0 320 84" style="width:100%;max-width:320px;" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="2" width="80" height="80" rx="6" fill="#0b0b0c" stroke="#2a2a2e"/>
+        <g transform="translate(42,42) rotate(-34)" stroke="#d7ff3a" stroke-linecap="round"><line x1="-11" y1="-27" x2="-11" y2="27" stroke-width="7"/><line x1="0" y1="-32" x2="0" y2="32" stroke-width="8.5"/><line x1="11" y1="-27" x2="11" y2="27" stroke-width="7"/></g>
+        <text x="100" y="52" font-family="Archivo Black, sans-serif" font-size="42" fill="#f3f1ea" letter-spacing="0.5">KROKPA</text>
+        <text x="102" y="70" font-family="Inter, sans-serif" font-size="11" letter-spacing="4" fill="#8a8a86">SUPPLY CO.</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div class="foot__brand">
+        <div class="brand-lockup">
+          <svg viewBox="0 0 64 64" style="height:26px;"><rect width="64" height="64" rx="10" fill="#0b0b0c"/><g transform="translate(32,32) rotate(-34)" stroke="#d7ff3a" stroke-linecap="round"><line x1="-9" y1="-21" x2="-9" y2="21" stroke-width="5.5"/><line x1="0" y1="-25" x2="0" y2="25" stroke-width="7"/><line x1="9" y1="-21" x2="9" y2="21" stroke-width="5.5"/></g></svg>
+          <span class="word">KROKPA</span>
+        </div>
+        <p data-i18n="footer.tagline">T-shirts for the unbothered. Heavyweight construction, small-batch drops, zero apologies.</p>
+      </div>
+      <div class="foot__col">
+        <h4 data-i18n="footer.shop_h4">Shop</h4>
+        <a href="index.html#shop" data-i18n="footer.shop_all_caps">All Caps</a>
+        <a href="product.html?id=acid-drop" data-i18n="footer.new_acid">New: Acid Mark Tee</a>
+        <a href="product.html?id=chrome" data-i18n="footer.limited_chrome">Limited: Chrome Tee</a>
+      </div>
+      <div class="foot__col">
+        <h4 data-i18n="footer.help_h4">Help</h4>
+        <a href="policies/shipping.html" data-i18n="nav.shipping">Shipping</a>
+        <a href="policies/returns.html" data-i18n="footer.returns_refunds">Returns &amp; Refunds</a>
+        <a href="policies/privacy.html" data-i18n="footer.privacy">Privacy</a>
+        <a href="policies/terms.html" data-i18n="footer.terms">Terms of Service</a>
+      </div>
+      <div class="foot__col">
+        <h4 data-i18n="footer.company_h4">Company</h4>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="mailto:support@example.com" data-i18n="footer.contact">Contact</a>
+      </div>
+    </div>
+    <div class="foot__bottom">
+      <span data-i18n="footer.copyright">&copy; 2026 KROKPA. All rights reserved.</span>
+      <span data-i18n="footer.madetoorder_index">Made to order. Limited pieces are not restocked.</span>
+    </div>
+    <div class="foot__legal">
+      <span data-i18n="footer.legal_taxid">KROKPA &middot; portfolio demo</span>
+      <span data-i18n="footer.legal_address">Azerbaijan &middot; support@example.com</span>
+    </div>
+  </div>
+</footer>
+
+<div class="overlay" id="cartOverlay"></div>
+<div class="drawer" id="cartDrawer">
+  <div class="drawer__head"><h3 data-i18n="cart.title">Your Bag</h3><button class="drawer__close" id="cartClose">&times;</button></div>
+  <div class="drawer__items" id="drawerItems"></div>
+  <div class="drawer__foot" id="drawerFoot" style="display:none;">
+    <div class="drawer__subtotal"><span data-i18n="cart.subtotal">Subtotal</span><span id="drawerSubtotal">₼0.00</span></div>
+    <a href="checkout.html" class="btn btn-primary btn-block" data-i18n="cart.checkout_btn">Checkout</a>
+  </div>
+</div>
+
+<script src="js/hats.js?v=2"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+<script>
+  function renderShop() {
+    document.getElementById('heroArt').innerHTML = teeSVG(getProduct('acid-mark-tee'));
+
+    document.getElementById('productGrid').innerHTML = PRODUCTS.map(p => trProduct(p)).map(p => `
+      <div class="card">
+        ${p.badge ? `<span class="badge ${p.badge === 'LIMITED' ? 'limited' : ''}">${trBadge(p.badge)}</span>` : ''}
+        <a href="product.html?id=${p.id}" class="card__media">${teeSVG(p)}</a>
+        <div class="card__body">
+          <a href="product.html?id=${p.id}"><div class="card__name">${p.name}</div></a>
+          <div class="card__desc">${p.tagline}</div>
+          <div class="card__row">
+            <span class="price">₼${p.price.toFixed(2)}</span>
+            <button class="mini-btn" onclick="addToCart('${p.id}',1)">${t('shop.add_to_bag')}</button>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+  renderShop();
+  document.addEventListener('krokpa:langchange', renderShop);
+</script>
+</body>
+</html>

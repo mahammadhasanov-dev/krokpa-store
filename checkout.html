@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Checkout — KROKPA</title>
+<link rel="icon" type="image/svg+xml" href="assets/mark.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=2" />
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="index.html" class="brand-lockup">
+      <svg viewBox="0 0 64 64"><rect width="64" height="64" rx="10" fill="#0b0b0c"/><g transform="translate(32,32) rotate(-34)" stroke="#d7ff3a" stroke-linecap="round"><line x1="-9" y1="-21" x2="-9" y2="21" stroke-width="5.5"/><line x1="0" y1="-25" x2="0" y2="25" stroke-width="7"/><line x1="9" y1="-21" x2="9" y2="21" stroke-width="5.5"/></g></svg>
+      <span class="word">KROKPA</span>
+    </a>
+    <div class="nav__right" style="gap:16px;">
+      <div data-lang-switch-slot></div>
+      <div style="display:flex;align-items:center;gap:8px;color:var(--off-dim);font-size:12px;letter-spacing:0.05em;text-transform:uppercase;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d7ff3a" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        <span data-i18n="nav.secure_checkout">Secure Checkout</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="checkout">
+  <div class="wrap">
+
+    <div id="checkoutBody">
+      <div class="checkout__grid">
+        <div class="checkout__form">
+          <div class="payment-brandbar">
+            <svg class="payment-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            <span data-i18n="checkout.payments_secured">Payments secured &amp; encrypted &middot; processed by</span> <b style="color:var(--off);font-family:'Archivo Black',sans-serif;letter-spacing:0.01em;">payment</b>
+          </div>
+
+          <div class="divider-label" data-i18n="checkout.contact_h">Contact</div>
+          <div class="field-group">
+            <label for="email" data-i18n="checkout.email">Email</label>
+            <input type="email" id="email" placeholder="you@email.com" required />
+          </div>
+
+          <div class="divider-label" data-i18n="checkout.shipping_address_h">Shipping Address</div>
+          <div class="field-row">
+            <div class="field-group"><label for="fname" data-i18n="checkout.first_name">First name</label><input type="text" id="fname" required /></div>
+            <div class="field-group"><label for="lname" data-i18n="checkout.last_name">Last name</label><input type="text" id="lname" required /></div>
+          </div>
+          <div class="field-group"><label for="addr" data-i18n="checkout.address">Address</label><input type="text" id="addr" placeholder="Street address" required /></div>
+          <div class="field-row three">
+            <div class="field-group"><label for="city" data-i18n="checkout.city">City</label><input type="text" id="city" required /></div>
+            <div class="field-group"><label for="state" data-i18n="checkout.state">State</label><input type="text" id="state" required /></div>
+            <div class="field-group"><label for="zip" data-i18n="checkout.zip">ZIP</label><input type="text" id="zip" required /></div>
+          </div>
+
+          <div class="divider-label" data-i18n="checkout.payment_h">Payment</div>
+          <div class="field-group">
+            <label for="cardnum" data-i18n="checkout.card_info">Card information</label>
+            <div class="card-field">
+              <input type="text" id="cardnum" placeholder="1234 1234 1234 1234" maxlength="19" required />
+              <div class="card-icons">
+                <svg width="28" height="18" viewBox="0 0 28 18"><rect width="28" height="18" rx="3" fill="#2a2a2e"/><text x="14" y="12" font-size="7" fill="#c9c7bd" text-anchor="middle" font-family="Inter">VISA</text></svg>
+                <svg width="28" height="18" viewBox="0 0 28 18"><rect width="28" height="18" rx="3" fill="#2a2a2e"/><circle cx="11" cy="9" r="5" fill="#ff3b30" opacity="0.8"/><circle cx="17" cy="9" r="5" fill="#d7ff3a" opacity="0.7"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group"><label for="exp" data-i18n="checkout.expiry">Expiry</label><input type="text" id="exp" placeholder="MM / YY" maxlength="7" required /></div>
+            <div class="field-group"><label for="cvc" data-i18n="checkout.cvc">CVC</label><input type="text" id="cvc" placeholder="CVC" maxlength="4" required /></div>
+          </div>
+          <div class="field-group"><label for="ccname" data-i18n="checkout.name_on_card">Name on card</label><input type="text" id="ccname" required /></div>
+
+          <button class="btn btn-primary btn-block pay-btn" id="payBtn"><span data-i18n="checkout.pay_prefix">Pay</span> <span id="payAmount">₼0.00</span></button>
+          <div class="payment-note">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            <span data-i18n="checkout.demo_note">Demo checkout — payment provider connection required</span>
+          </div>
+        </div>
+
+        <div class="checkout__summary">
+          <h3 style="font-size:15px;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:22px;" data-i18n="checkout.order_summary">Order Summary</h3>
+          <div id="summaryItems"></div>
+          <div style="margin-top:18px;">
+            <div class="sum-line"><span data-i18n="checkout.subtotal">Subtotal</span><span id="sumSubtotal">₼0.00</span></div>
+            <div class="sum-line"><span data-i18n="checkout.shipping_label">Shipping</span><span id="sumShipping">₼0.00</span></div>
+            <div class="sum-line"><span data-i18n="checkout.est_tax">Estimated tax</span><span id="sumTax">₼0.00</span></div>
+            <div class="sum-line total"><span data-i18n="checkout.total">Total</span><span id="sumTotal">₼0.00</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="successBody" style="display:none;">
+      <div class="success">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>
+        <h2 style="font-size:32px;margin-bottom:12px;" data-i18n="checkout.order_confirmed">Order Confirmed</h2>
+        <p style="color:var(--off-dim);margin-bottom:6px;"><span data-i18n="checkout.order_label">Order</span> <span id="orderNumber" class="mono" style="color:var(--acid);"></span></p>
+        <p style="color:var(--off-dim);max-width:420px;margin:0 auto 30px;" data-i18n="checkout.demo_note2">This is a demo store — no payment was actually processed. A real confirmation email would land in your inbox here.</p>
+        <a href="index.html" class="btn btn-primary" data-i18n="checkout.back_to_shop">Back to Shop</a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<script src="js/hats.js?v=2"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+<script>
+  function renderSummary() {
+    const lines = getCart().map(l => ({ ...l, product: getProduct(l.id) })).filter(l => l.product);
+    const wrap = document.getElementById('summaryItems');
+
+    if (lines.length === 0) {
+      wrap.innerHTML = `<p style="color:var(--off-dim);font-size:14px;">${t('checkout.bag_empty')} <a href="index.html" style="color:var(--acid);text-decoration:underline;">${t('checkout.go_shop')}</a></p>`;
+      document.getElementById('payBtn').disabled = true;
+    }
+
+    wrap.innerHTML = lines.length === 0 ? wrap.innerHTML : lines.map(l => `
+      <div class="sum-item">
+        <div class="sum-item__media">${teeSVG(l.product)}</div>
+        <div style="flex:1;">
+          <div class="sum-item__name">${l.product.name}</div>
+          <div class="sum-item__meta">${t('checkout.qty')} ${l.qty}</div>
+        </div>
+        <div class="sum-item__name">₼${(l.product.price * l.qty).toFixed(2)}</div>
+      </div>
+    `).join('');
+
+    const subtotal = lines.reduce((s, l) => s + l.product.price * l.qty, 0);
+    const shipping = subtotal === 0 ? 0 : (subtotal >= 150 ? 0 : 8.90);
+    const tax = 0;
+    const total = subtotal + shipping + tax;
+
+    document.getElementById('sumSubtotal').textContent = `₼${subtotal.toFixed(2)}`;
+    document.getElementById('sumShipping').textContent = shipping === 0 ? t('checkout.free') : `₼${shipping.toFixed(2)}`;
+    document.getElementById('sumTax').textContent = `₼${tax.toFixed(2)}`;
+    document.getElementById('sumTotal').textContent = `₼${total.toFixed(2)}`;
+    document.getElementById('payAmount').textContent = `₼${total.toFixed(2)}`;
+  }
+  document.addEventListener('krokpa:langchange', renderSummary);
+
+  document.getElementById('cardnum').addEventListener('input', e => {
+    e.target.value = e.target.value.replace(/\D/g, '').replace(/(.{4})/g, '$1 ').trim().slice(0, 19);
+  });
+  document.getElementById('exp').addEventListener('input', e => {
+    let v = e.target.value.replace(/\D/g, '').slice(0, 4);
+    if (v.length > 2) v = v.slice(0, 2) + ' / ' + v.slice(2);
+    e.target.value = v;
+  });
+
+  document.getElementById('payBtn').addEventListener('click', () => {
+    if (getCart().length === 0) return;
+    const btn = document.getElementById('payBtn');
+    btn.textContent = t('checkout.processing');
+    btn.disabled = true;
+    setTimeout(() => {
+      const orderNum = 'STR-' + Math.floor(100000 + Math.random() * 900000);
+      document.getElementById('orderNumber').textContent = orderNum;
+      document.getElementById('checkoutBody').style.display = 'none';
+      document.getElementById('successBody').style.display = 'block';
+      localStorage.removeItem('krokpa_cart');
+    }, 1100);
+  });
+
+  renderSummary();
+</script>
+</body>
+</html>

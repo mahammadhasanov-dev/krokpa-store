@@ -1,0 +1,8 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="KROKPA mark">
+  <rect width="64" height="64" rx="10" fill="#0b0b0c"/>
+  <g transform="translate(32,32) rotate(-34)" stroke="#d7ff3a" stroke-linecap="round">
+    <line x1="-9" y1="-21" x2="-9" y2="21" stroke-width="5.5"/>
+    <line x1="0" y1="-25" x2="0" y2="25" stroke-width="7"/>
+    <line x1="9" y1="-21" x2="9" y2="21" stroke-width="5.5"/>
+  </g>
+</svg>
